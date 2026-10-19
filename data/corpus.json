@@ -1,0 +1,96 @@
+{
+  "projects": [
+    {
+      "project_id": "CYN-101",
+      "title": "Multi-Tenant FinTech SaaS Billing & Webhook Reconciliation Engine",
+      "vertical": "FinTech & Custom Web Engineering",
+      "architecture": "Event-driven transactional outbox on PostgreSQL with Row-Level Security (RLS), PgBouncer transaction pooling, Redis distributed locks for Stripe webhook idempotency, Next.js App Router, and AWS ECS.",
+      "tech_stack": ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "PgBouncer", "Redis", "Stripe HMAC", "Docker", "AWS ECS"],
+      "compliance": ["SOC2", "PCI-DSS", "RBAC", "RLS"],
+      "subsystem_hours": {
+        "Data & Auth Security": 115,
+        "Core API & Idempotent Webhooks": 145,
+        "AI & Analytics Pipeline": 80,
+        "Frontend, QA & Cloud CI/CD": 95
+      }
+    },
+    {
+      "project_id": "CYN-102",
+      "title": "Omnichannel Hybrid-RAG Support Copilot & CRM Triage Gateway",
+      "vertical": "AI Automation & Conversational Agents",
+      "architecture": "FastAPI asynchronous orchestrator using Okapi BM25 + HNSW dense vector retrieval (ef_construction=200, M=16) with Reciprocal Rank Fusion, Redis L1 semantic cache, and PII redaction guardrails.",
+      "tech_stack": ["Python", "FastAPI", "Qdrant HNSW", "Redis Cache", "Gemini 2.5 Flash", "React", "Zendesk API", "Docker"],
+      "compliance": ["GDPR", "PII-Redaction", "Hallucination-Guardrail"],
+      "subsystem_hours": {
+        "Data & Auth Security": 70,
+        "Core API & Idempotent Webhooks": 95,
+        "AI & Analytics Pipeline": 135,
+        "Frontend, QA & Cloud CI/CD": 65
+      }
+    },
+    {
+      "project_id": "CYN-103",
+      "title": "HIPAA-Compliant Telemedicine Mobile Suite & Clinical Triage AI",
+      "vertical": "HealthTech & Mobile Engineering",
+      "architecture": "Flutter cross-platform mobile client with low-latency WebRTC video relay, HL7/FHIR electronic health record synchronization, AWS KMS envelope encryption, and calibrated symptom triage classifier.",
+      "tech_stack": ["Flutter", "Dart", "WebRTC", "Node.js", "PostgreSQL", "HL7 FHIR", "AWS KMS", "Scikit-learn"],
+      "compliance": ["HIPAA", "HL7-FHIR", "E2E-Encryption", "Audit-Logging"],
+      "subsystem_hours": {
+        "Data & Auth Security": 150,
+        "Core API & Idempotent Webhooks": 130,
+        "AI & Analytics Pipeline": 105,
+        "Frontend, QA & Cloud CI/CD": 140
+      }
+    },
+    {
+      "project_id": "CYN-104",
+      "title": "Headless Composable Commerce & Real-Time Merchandising Recommender",
+      "vertical": "UI/UX Design, E-Commerce & Digital Growth",
+      "architecture": "Next.js storefront at Cloudflare Edge, Shopify GraphQL Storefront API, automated JSON-LD programmatic SEO schema generator, and collaborative SVD session-based recommendation service.",
+      "tech_stack": ["Next.js", "Tailwind CSS", "Shopify GraphQL", "Python", "TruncatedSVD", "Cloudflare Workers"],
+      "compliance": ["WCAG-2.2-AA", "Core-Web-Vitals", "JSON-LD-SEO"],
+      "subsystem_hours": {
+        "Data & Auth Security": 60,
+        "Core API & Idempotent Webhooks": 90,
+        "AI & Analytics Pipeline": 95,
+        "Frontend, QA & Cloud CI/CD": 125
+      }
+    },
+    {
+      "project_id": "CYN-105",
+      "title": "Zero-Trust API Gateway & Unsupervised Auth Anomaly Sentinel",
+      "vertical": "Cybersecurity & Cloud Infrastructure",
+      "architecture": "OAuth2 RS256 asymmetric JWT validation gateway with mutual TLS (mTLS), Redis sliding-window rate limiting (120 req/min), and Isolation Forest behavioral anomaly detection on authentication streams.",
+      "tech_stack": ["Python", "Spring Boot", "OAuth2 RS256", "mTLS", "Redis", "Isolation Forest", "PostgreSQL", "Prometheus"],
+      "compliance": ["Zero-Trust", "SOC2", "OAuth2-OIDC", "mTLS"],
+      "subsystem_hours": {
+        "Data & Auth Security": 160,
+        "Core API & Idempotent Webhooks": 125,
+        "AI & Analytics Pipeline": 115,
+        "Frontend, QA & Cloud CI/CD": 80
+      }
+    },
+    {
+      "project_id": "CYN-106",
+      "title": "ERP Supply-Chain Demand Forecaster & Automated Document Extraction",
+      "vertical": "Enterprise Data Engineering & Document AI",
+      "architecture": "Celery distributed ETL workers, layout-aware PDF OCR clause extraction into pgvector, quantile gradient boosting inventory forecaster, and React executive telemetry portal.",
+      "tech_stack": ["Python", "FastAPI", "Celery", "PostgreSQL", "pgvector", "Scikit-learn", "React", "Docker"],
+      "compliance": ["ISO-27001", "SOC2", "Schema-Validation"],
+      "subsystem_hours": {
+        "Data & Auth Security": 95,
+        "Core API & Idempotent Webhooks": 120,
+        "AI & Analytics Pipeline": 150,
+        "Frontend, QA & Cloud CI/CD": 85
+      }
+    }
+  ],
+  "eval_queries": [
+    {"query": "We need multi-tenant PostgreSQL Row-Level Security with PgBouncer transaction pooling and idempotent Stripe HMAC webhooks.", "expected_id": "CYN-101"},
+    {"query": "Deploy an omnichannel customer support chatbot using Qdrant HNSW vector search, Reciprocal Rank Fusion, and GDPR PII redaction.", "expected_id": "CYN-102"},
+    {"query": "Build a HIPAA compliant Flutter telemedicine app with WebRTC video calls, HL7 FHIR integration, and AWS KMS encryption.", "expected_id": "CYN-103"},
+    {"query": "Migrate to a headless Next.js e-commerce storefront with Shopify GraphQL, JSON-LD SEO schema, and SVD product recommendations.", "expected_id": "CYN-104"},
+    {"query": "Architect a Zero-Trust API gateway enforcing OAuth2 RS256 JWTs, mTLS, Redis sliding-window rate limiting, and Isolation Forest auth anomaly scoring.", "expected_id": "CYN-105"},
+    {"query": "Automate ERP supply chain demand forecasting and layout-aware PDF contract extraction into pgvector using Celery workers.", "expected_id": "CYN-106"}
+  ]
+}
